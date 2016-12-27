@@ -4,3 +4,16 @@ PARALLEL COMPUTING:
 ===================
 
 
+INTRO:
+
+ During many years, the advance in computing hardware, were based in doing smaller and faster CPUs, once it was hitten a point, where this wasn't possible anymore, the technology evolved to parallelize CPU cores in order to increase performance.
+ 
+ To parallelize a program, the first step is to identify what parts of the program can be parallelized. Two main models are used:
+ Master/slave relationship, where a core organizes the work on the other cores.
+ Data flow model, in which the work is done in parallelized pipelined stages.
+ 
+ 
+ MASTER/SLAVE MODEL:
+  One core to rule them all... a core distribute the tasks/threads in the remaining cores, usually those systems have quite a control structure, and tasks/threads are small and are allocated easily in the remainder cores. The challenge in this model, is to keep the balance of work between processors, to obtain an optimal parallelization.
+  
+  
