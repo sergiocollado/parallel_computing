@@ -8,12 +8,22 @@ INTRO:
 
  During many years, the advance in computing hardware, were based in doing smaller and faster CPUs, once it was hitten a point, where this wasn't possible anymore, the technology evolved to parallelize CPU cores in order to increase performance.
  
- To parallelize a program, the first step is to identify what parts of the program can be parallelized. Two main models are used:
- Master/slave relationship, where a core organizes the work on the other cores.
- Data flow model, in which the work is done in parallelized pipelined stages.
+ To parallelize a program, the first step is to identify what parts of the program can be parallelized: that is task or calculations or algorithms or data processing that don't depend on each other results. Two main models are used:
+- Master/slave relationship, where a core organizes the work on the other cores.
+- Data flow model, in which the work is done in parallelized pipelined stages.
  
  
  MASTER/SLAVE MODEL:
   One core to rule them all... a core distribute the tasks/threads in the remaining cores, usually those systems have quite a control structure, and tasks/threads are small and are allocated easily in the remainder cores. The challenge in this model, is to keep the balance of work between processors, to obtain an optimal parallelization.
   
-  
+ DATA FLOW MODEL:
+  Each core works on certain task or tasks, and once the data is processed is passed to a common work that continues the process.This model is fitted to work with data intensive applications, as the data can come from sensors or networks or other services. And also fits real-time systems, as it reduces the latency of the system. 
+
+HOW TO: OpenMP
+
+OpenMP is the API (Application Program Interface) for programming multi-task application in multi-core systems with a SMP architecture (Shared Memory Parallel architecture).
+
+One of the main advantages, is that OpenMP, is sequential-friendly, that is: you don't need to define each task separatelly, but, just indicate to the compiler what parts of the code you want to execute in different cores.
+
+reference: http://www.openmp.org/
+
