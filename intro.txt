@@ -3,9 +3,13 @@
 PARALLEL COMPUTING:
 ===================
 
+FOREWORD: This are my personal notes, about methods for develop systems in multicore architectures, I didn't invent/discover anything,
+but keep my notes here, for my future reference, or to help collegues, that need some intro to the topic. I guess I have used lots of
+references, and I'm not sure if I have named them all; I've just been picking stuff from here or there, without any particular order...
+so everithing, is due to their respective owners :) - cool people!. thanks!
+
 
 INTRO:
-
  During many years, the advance in computing hardware, were based in doing smaller and faster CPUs, once it was hitten a point, where this wasn't possible anymore, the technology evolved to parallelize CPU cores in order to increase performance.
  
  To parallelize a program, the first step is to identify what parts of the program can be parallelized: that is task or calculations or algorithms or data processing that don't depend on each other results. Two main models are used:
@@ -19,7 +23,9 @@ INTRO:
  DATA FLOW MODEL:
   Each core works on certain task or tasks, and once the data is processed is passed to a common work that continues the process.This model is fitted to work with data intensive applications, as the data can come from sensors or networks or other services. And also fits real-time systems, as it reduces the latency of the system. 
 
-HOW TO: OpenMP
+HOW TO: 
+
+One nice option to start is to use OpenMP.
 
 OpenMP is the API (Application Program Interface) for programming multi-task application in multi-core systems with a SMP architecture (Shared Memory Parallel architecture).
 
