@@ -33,6 +33,7 @@ One of the main advantages, is that OpenMP, is sequential-friendly, that is: you
 
 reference: http://www.openmp.org/
 learning OpenMP: http://www.openmp.org/resources/
+An introduction to Parallel programming with OpenMP- by Alina Kiessling.
 
 SAMPLE Hello Wold!:
 ==================
