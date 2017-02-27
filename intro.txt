@@ -34,4 +34,31 @@ One of the main advantages, is that OpenMP, is sequential-friendly, that is: you
 reference: http://www.openmp.org/
 learning OpenMP: http://www.openmp.org/resources/
 
+SAMPLE Hello Wold!:
+==================
+
+Consider the program in C:
+
+#include 'omp.h'
+void main()
+{
+  #pragma omp pararell 
+       {
+          int ID = omp_get_thread_num();
+          printf('Hello(%d) ',ID);
+          printf('World(%d) \n',ID);
+       }
+}
+
+
+the first line: #include 'omp.h', includes the OpenMP.
+the paralelled region is placed under the directive: #prama opm pararell { ... }
+The function 'omp_get_thread_num()", returns the trhead ID of the programm.
+
+To compile the program, we use:
+
+> gcc -fopenmp HelloWold.c -o Hello
+
+for the GNU compiler.
+
 
