@@ -23,9 +23,10 @@ INTRO:
  DATA FLOW MODEL:
   Each core works on certain task or tasks, and once the data is processed is passed to a common work that continues the process.This model is fitted to work with data intensive applications, as the data can come from sensors or networks or other services. And also fits real-time systems, as it reduces the latency of the system. 
 
-HOW TO: 
+HOW TO BEGIN TO WRITE PARALLEL CODE:
+====================================
 
-One nice option to start is to use OpenMP.
+One recomended option to start is to use OpenMP.
 
 OpenMP is the API (Application Program Interface) for programming multi-task application in multi-core systems with a SMP architecture (Shared Memory Parallel architecture).
 
@@ -42,21 +43,23 @@ Consider the program in C:
 
 
 ```C
-#include 'omp.h'
+#include 'omp.h' //includes the openMP library
 void main()
 {
-  #pragma omp pararell 
+  #pragma omp pararell //this prediretive defines that the following code block {...} is to be paralleliced.
        {
-          int ID = omp_get_thread_num();
-          printf('Hello(%d) ',ID);
-          printf('World(%d) \n',ID);
+          int ID = omp_get_thread_num(); //retrieves the ID number of the current thread
+          printf('Hello  (%d) ',ID);
+          printf('World  (%d) \n',ID);
        }
 }
 ```
 
 the first line: #include 'omp.h', includes the OpenMP.
+
 the paralelled region is placed under the directive: #prama opm pararell { ... }
-The function 'omp_get_thread_num()", returns the trhead ID of the programm.
+
+The function 'omp_get_thread_num()", returns the thread ID of the programm.
 
 To compile the program, we use:
 
