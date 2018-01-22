@@ -75,4 +75,16 @@ Vector Instructions sets for Intel Architecture:
  - AVX (256 bits)
  - IMCI, AVX-512 (512 bits)
  
- 
+ Vectorization directives:
+  - #pragma omp simd
+  - #pragma vector always
+  - #pragma vector aligned | unaligned
+  - __asume_aligned **keyword**
+  - #pragma vector nontemporal | temporal
+  - #pragma novector
+  - #pragma ivdev
+  - restrict **qualifier and** -restrict **command-line argument**
+  - #pragma loop count
+  
+  >> link: Intel Intrinsic Vectorization Guide:  https://software.intel.com/sites/landingpage/IntrinsicsGuide/
+  
