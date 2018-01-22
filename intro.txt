@@ -40,6 +40,8 @@ SAMPLE Hello Wold!:
 
 Consider the program in C:
 
+
+```C
 #include 'omp.h'
 void main()
 {
@@ -50,7 +52,7 @@ void main()
           printf('World(%d) \n',ID);
        }
 }
-
+```
 
 the first line: #include 'omp.h', includes the OpenMP.
 the paralelled region is placed under the directive: #prama opm pararell { ... }
@@ -63,3 +65,14 @@ To compile the program, we use:
 for the GNU compiler.
 
 
+VOCABULARY:
+
+SIMD - SINGLE INSTRUCTION MULTIPLE DATA (intel) (paralel operation)
+
+Vector Instructions sets for Intel Architecture:
+ - MMX (64 bits)
+ - SSE (1,2,3,.., 4.2) (128 bits)
+ - AVX (256 bits)
+ - IMCI, AVX-512 (512 bits)
+ 
+ 
