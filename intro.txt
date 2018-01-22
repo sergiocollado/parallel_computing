@@ -86,5 +86,8 @@ Vector Instructions sets for Intel Architecture:
   - restrict **qualifier and** -restrict **command-line argument**
   - #pragma loop count
   
+  Multiversioning protection
+  - #pragma ivdep
+  
   >> link: Intel Intrinsic Vectorization Guide:  https://software.intel.com/sites/landingpage/IntrinsicsGuide/
   
