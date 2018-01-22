@@ -107,6 +107,6 @@ TRICKS OF THE TRADE:
 
 ```C++
 double A[n], B[n];
-A[0:n] = B[0:n] = 1.0
+A[0:n] = B[0:n] = 1.0 //by the way, this inizialization value assignation, is also vectorized. :)
 ```
 
