@@ -1,7 +1,7 @@
 
 
-PARALLEL COMPUTING:
-===================
+NOTES on PARALLEL COMPUTING:
+===========================
 
 FOREWORD: This are my personal notes, about methods for develop systems in multicore architectures, I didn't invent/discover anything,
 but keep my notes here, for my future reference, or to help collegues, that need some intro to the topic. I guess I have used lots of
