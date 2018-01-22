@@ -98,3 +98,15 @@ Vector Instructions sets for Intel Architecture:
   >> link: Intel Intrinsic Vectorization Guide:  https://software.intel.com/sites/landingpage/IntrinsicsGuide/
   
  
+TRICKS OF THE TRADE:
+
+>> while loops, cannot be paralelized, due you cannot know at compiler and even at run time, the number of times it is going to loop around. Then, while loops, will not be paralleliced with authomatic tool, neither with compiler enformecements ...
+
+
+>> To initialize vertors in C++, use the notation extentions for C++, most of the compiles can handle those definitions.
+
+```C++
+double A[n], B[n];
+A[0:n] = B[0:n] = 1.0
+```
+
