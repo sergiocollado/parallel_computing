@@ -75,6 +75,9 @@ Vector Instructions sets for Intel Architecture:
  - AVX - Advanced Vector Extension - (256 bits) floating point vector operations (single & double precission)
  - IMCI, AVX-512 (512 bits)
  
+ With vectorization a speed up of 2,4, ... even 16 is possible. If vectorization is not used, that means, you are expending even x16 times money (or time), more on you computer process data programs.
+ 
+ 
  Vectorization directives:
   - #pragma omp simd
   - #pragma vector always
@@ -91,3 +94,4 @@ Vector Instructions sets for Intel Architecture:
   
   >> link: Intel Intrinsic Vectorization Guide:  https://software.intel.com/sites/landingpage/IntrinsicsGuide/
   
+ 
