@@ -71,8 +71,8 @@ SIMD - SINGLE INSTRUCTION MULTIPLE DATA (intel) (paralel operation)
 
 Vector Instructions sets for Intel Architecture:
  - MMX - Multi Media Extensions (64 bits, only integers).
- - SSE - Streaming SIMD Extensions - (1,2,3,.., 4.2) (128 bits). Frome SSE2, floating point (single & double precission) numbers are supported.
- - AVX (256 bits)
+ - SSE - Streaming SIMD Extensions - (versions: 1,2,3,.., 4.2) (128 bits). Frome SSE2, floating point (single & double precission) numbers are supported.
+ - AVX - Advanced Vector Extension - (256 bits) floating point vector operations (single & double precission)
  - IMCI, AVX-512 (512 bits)
  
  Vectorization directives:
