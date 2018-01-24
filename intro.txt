@@ -132,6 +132,11 @@ double A[n], B[n];
 A[0:n] = B[0:n] = 1.0 //by the way, this inizialization value assignation, is also vectorized. :)
 ```
 
->> Definiton of variables with the keywords: 'extern' and/or 'volatile' will cause that in most of the compiles operation whith variables dedifined as such, will not be optimized, as its value can change without notice from external sources. ... so no optimization at all, for those varialbes. On the other hand, this behavior can have some advantage, in the case those variables are use to represent 
-certain cases, as sensor or similar data, because they will be protected on its writting. 
+>> Definiton of variables with the keywords: 'extern const' will cause that in most of the compiles operation whith variables defined as such, will not be optimized, as its value can change without notice from external sources. ... so no optimization at all, for those varialbls. On the other hand, this behavior can have some advantage, in the case those variables are use to represent 
+certain cases, as sensor or similar data, because they will be protected on its writting, so for these cases that varible definition, is like set those variable as a READ-ONLY.
+
+```
+extern const input_signal;  //treated as a READ-ONLY variable.
+```
+
 
