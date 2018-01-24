@@ -4,13 +4,35 @@ NOTES on PARALLEL COMPUTING:
 ===========================
 
 FOREWORD: This are my personal notes, about methods for develop systems in multicore architectures, I didn't invent/discover anything,
-but keep my notes here, for my future reference, or to help collegues, that need some intro to the topic. I guess I have used lots of
-references, and I'm not sure if I have named them all; I've just been picking stuff from here or there, without any particular order...
+but keep my notes here, for my future reference, or as reference to help collegues, that need some intro to the topic. I guess I have used lots of references, and I'm not sure if I have named them all; I've just been picking stuff from here and there, without any particular order...
 so everithing, is due to their respective owners :) - cool people!. thanks!
 
 
 INTRO:
- During many years, the advance in computing hardware, were based in doing smaller and faster CPUs, once it was hitten a point, where this wasn't possible anymore, the technology evolved to parallelize CPU cores in order to increase performance.
+ During many years, the advance in computing hardware, were focus in doing smaller and faster CPUs, once it was hitten a point, where this wasn't possible anymore, the technology evolved to parallelize CPU cores in order to increase performance.
+ 
+ Parallelization allows a program to be run in different computing units, allowing to short its executio time.
+ 
+ For example a matrix multiplications is easily parallelized:
+ 
+ 
+ ```
+ |a1 a2|   *   | b1 b2|   =    |a1*b1+a2*b3   a1*b2 + a2*b4|
+ |a3 a4|       | b3 b4|        |a1*b2+a2*b4   a3*b2 + a4*b4|
+ ```
+ 
+ Each element of the resulting matriz can be computed by different units:
+ 
+ ```
+ CPU 1 :    a1*b1 + a2*b3
+ CPU 2 :    a1*b2 + a2*b4
+ CPU 3 :    a1*b2 + a2*b4
+ CPU 4 :    a3*b2 + a4+b4
+ ```
+ 
+ This is possible, due each element is not dependant on the others.
+ If this squeme is followed, for this example it is possible to have a time improvement around x4.
+ 
  
  To parallelize a program, the first step is to identify what parts of the program can be parallelized: that is task or calculations or algorithms or data processing that don't depend on each other results. Two main models are used:
 - Master/slave relationship, where a core organizes the work on the other cores.
